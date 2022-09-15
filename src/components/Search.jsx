@@ -18,9 +18,8 @@ const Search = ({ setData, setError }) => {
           setData(result.data);
         }
       } catch (error) {
-        setError(true);
-
         console.log(error.message);
+        setError(true);
       }
     } else {
       setshowErrorInput(true);
