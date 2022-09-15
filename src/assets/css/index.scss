@@ -1,0 +1,102 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 10rem;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+}
+.cardContainer {
+  border-radius: 20px;
+  padding: 2rem;
+  width: 50%;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+
+  .title {
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(80, 79, 79);
+  }
+
+  .searchScore {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    .team {
+      display: flex;
+      gap: 0.675rem;
+      height: 3rem;
+      padding: 2rem;
+
+      .nameTeam {
+        vertical-align: top;
+      }
+
+      .score {
+        border-bottom: 3px solid black;
+        height: 50px;
+        width: 70px;
+        & input {
+          border: none;
+          height: 45px;
+          width: 65px;
+          font-size: 1.75rem;
+          font-weight: bold;
+        }
+      }
+    }
+    .separator {
+      width: 3px;
+      background: rgb(201, 201, 201);
+    }
+  }
+
+  input[type="button"] {
+    background: rgb(90, 90, 90);
+    border-radius: 5px;
+    margin-top: 2rem;
+    width: 40%;
+    padding: 1rem;
+    color: white;
+  }
+
+  table {
+    width: 100%;
+    thead {
+      font-weight: bold;
+      tr > td {
+        border-bottom: 2px solid rgb(159, 158, 158);
+        padding: 1rem;
+      }
+    }
+    tbody {
+      vertical-align: top;
+      tr > td {
+        padding: 1rem;
+      }
+    }
+  }
+  .errorInput {
+    padding: 2rem;
+    color: red;
+  }
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

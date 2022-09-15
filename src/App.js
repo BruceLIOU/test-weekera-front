@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import Search from "./components/Search";
+import List from "./components/List";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="homeContainer">
+      <Search setData={setData} setError={setError} />
+      <List data={data} error={error} />
     </div>
   );
 }
