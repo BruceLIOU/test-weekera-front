@@ -17,12 +17,12 @@ const List = ({ data, error }) => {
             <tr>
               <td width={"50%"}>
                 {data.map((item, index) => {
-                  return <p key={index}>{item.teamX}</p>;
+                  return item.teamX ? <p key={index}>{item.teamX}</p> : "";
                 })}
               </td>
               <td>
                 {data.map((item, index) => {
-                  return <p key={index}>{item.teamY}</p>;
+                  return item.teamY ? <p key={index}>{item.teamY}</p> : "";
                 })}
               </td>
             </tr>
