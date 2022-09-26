@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, {useState} from "react";
 
 import Search from "./components/Search";
 import List from "./components/List";
 
-function App() {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
+const App = ()=> {
+  const [data, setData] = useState<{teamX: string, teamY:string}[]>([])
+  const [error, setError] = useState<boolean>(false)
 
   return (
     <div className="homeContainer">
